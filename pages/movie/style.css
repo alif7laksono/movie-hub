@@ -1,0 +1,347 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.movie-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 20px;
+  flex-wrap: wrap;
+}
+
+.left-column {
+  flex: 1; /* Take up all available space in the flex container */
+  margin-right: 20px; /* Add some space between the columns */
+}
+
+.right-column {
+  flex: 2; /* Take up twice the space of the left column */
+}
+
+.movie-title {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.release-date,
+.genres,
+.runtime,
+.language,
+.vote-average,
+.production-companies {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.overview {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #333;
+  border-radius: 8px;
+}
+
+.images-title,
+.cast-title {
+  font-size: 1.5em;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.images-container,
+.cast-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.movie-image {
+  /* width: auto; */
+  max-width: 200px;
+  margin: 0 10px 10px 0;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-content {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.movie-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cast-member {
+  border: 1px solid #333;
+  padding: 10px;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #333;
+  transition: color 0.3s;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.cast-member:hover {
+  color: #ff5722;
+  /* Ubah warna saat hover */
+  background-color: #e0e0e0;
+  /* Ubah warna latar belakang saat hover */
+}
+
+.poster-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-movie-cast {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.cast-title {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.cast-list {
+  display: flex;
+  padding: 0;
+  margin: 0 -10px;
+  list-style: none;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.cast-member:last-child {
+  margin-right: 0;
+  /* Tidak ada margin kanan pada cast member terakhir */
+}
+
+.cast-member-image {
+  width: 100px;
+  /* Ubah ukuran gambar sesuai kebutuhan */
+  height: 150px;
+  /* Sesuaikan tinggi gambar jika diperlukan */
+  object-fit: cover;
+  /* Memastikan gambar diatur dengan baik */
+  border-radius: 5px;
+  /* Tambahkan border radius pada gambar */
+}
+
+.cast-character {
+  font-size: 14px;
+  font-weight: bold;
+  color: #757575;
+  /* Ubah warna teks karakter */
+}
+
+.bold-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bold-label {
+  color: #555;
+  margin-right: 5px;
+}
+
+.recommendations-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  position: relative;
+}
+
+.recommendations-title {
+  padding-top: 70px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.recommendations-list {
+  display: flex;
+  padding: 0;
+  margin: 0 10px;
+  padding-top: 30px;
+}
+
+.recommendation-item {
+  margin: 0 20px; /* Adjust as needed */
+}
+
+.recommendation-image {
+  width: 200px; /* Adjust image width as needed */
+  height: auto;
+}
+
+.trailers-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-top: 20px;
+}
+
+.trailers-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.trailers-list {
+  display: flex;
+  padding: 0;
+  margin: 0 -10px;
+}
+
+.trailer-item {
+  margin-right: 10px;
+}
+
+/* Style the iframe to maintain a consistent aspect ratio */
+.trailer-item iframe {
+  width: 300px;
+  height: 169px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+/* Hover effect to scale the iframe */
+.trailer-item:hover iframe {
+  transform: scale(1.1);
+}
+
+.recommendation-title,
+.recommendation-link {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  max-width: 200px;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  .movie-details {
+    padding: 30px 10px;
+  }
+
+  .left-column {
+    display: flex;
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .poster-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .right-column {
+    flex: 1;
+    align-items: center;
+    text-align: center;
+  }
+
+  .movie-title {
+    font-size: 10px; /* Adjust font size for smaller screens */
+  }
+
+  .release-date,
+  .genres,
+  .runtime,
+  .language,
+  .vote-average,
+  .production-companies {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+
+  .overview {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+
+  .images-container,
+  .cast-container,
+  .recommendations-list {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 10px;
+  }
+
+  .movie-image {
+    max-width: 150px; /* Adjust image size for smaller screens */
+  }
+
+  .cast-member {
+    padding: 8px;
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  .cast-member-image {
+    width: 80px;
+    height: 120px;
+  }
+
+  .cast-character {
+    font-size: 12px;
+  }
+
+  .recommendation-item {
+    margin-right: 5px;
+  }
+
+  .recommendation-image {
+    width: 120px;
+  }
+
+  .trailers-container {
+    padding-top: 10px;
+  }
+
+  .trailers-list {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+  }
+
+  .trailer-item {
+    margin-right: 5px;
+  }
+
+  /* Adjust iframe size for smaller screens */
+  .trailer-item iframe {
+    width: 200px;
+    height: 113px;
+  }
+
+  .trailers-title,
+  .recommendations-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+  }
+}

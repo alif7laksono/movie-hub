@@ -1,0 +1,48 @@
+/* styles.css */
+
+.movieCard {
+  margin: 10px;
+  padding: 10px 10px;
+  width: 200px;
+  margin-right: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.movieImage {
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.movieCard h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.movieCard:hover h3 {
+  color: #3498db; /* Change the color on hover as per your design */
+}
+
+.releaseDate,
+.top-title {
+
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  color: #7f8c8d; /* Subdued color for release date */
+}
+
+.imageScrollerContainer {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.imageScroller {
+  display: inline-flex;
+}
+
+/* Add any additional styles you need */

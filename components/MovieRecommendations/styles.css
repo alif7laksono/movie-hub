@@ -1,0 +1,29 @@
+
+.recommendations-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .recommendations-title {
+   padding-top: 70px;
+    width: 100%; 
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  .recommendations-list {
+    display: flex;
+    padding: 0;
+    margin: 0 -10px;
+    padding-top: 30px; /* Adjust as needed */
+  }
+  
+  .recommendation-item {
+    margin-right: 10px; /* Adjust as needed */
+  }
+  
+  .recommendation-image {
+    width: 200px; /* Adjust image width as needed */
+    height: auto;
+  }

@@ -2,26 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.container {
+  padding: 20px 230px;
+  background-color: #ffffff;
+  font-family: "Arial", sans-serif;
+}
+
+.sectionTitle {
+  color: #3498db;
+  margin-top: 20px;
+}
+
+.navLink {
+  margin-left: 33px;
+  font-size: 20px;
+  color: #3498db;
+  font: bold;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color 0.3s; /* Add smooth transition effect */
+}
+
+.navLink:hover {
+  color: #2980b9; /* Change the color on hover as per your design */
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 2px 2px;
+  }
+  .navLink {
+    padding: -10px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media (min-width: 641px) and (max-width: 768px) {
+  .container {
+    padding: 5px 5px;
+  }
+}
+
+/* Responsive styles for large screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 7px 7px;
+  }
 }

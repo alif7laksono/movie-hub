@@ -1,0 +1,103 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #fcfcfc;
+}
+
+.trending-page {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.trending-sidebar {
+  margin-right: auto;
+  width: 25%;
+  background-color: #ffffff;
+  color: #fff;
+  padding: 20px;
+  border-right: 1px solid #000;
+  height: 100vh;
+}
+
+.trending-content {
+  margin-left: auto;
+  width: 75%;
+  padding: 20px;
+}
+
+.trending-movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.trending-movie {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; /* Display children in a column layout */
+  align-items: center; /* Center align children horizontally */
+  box-sizing: border-box; /* Include padding and border in total width/height */
+}
+
+.movieImage {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 10px; /* Add space between image and details */
+  cursor: pointer; /* Set cursor to pointer */
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: 300px; /* Set a fixed height for consistency */
+  box-sizing: border-box; /* Include padding and border in total width/height */
+}
+
+.movieDetails {
+  text-align: center; /* Center align text */
+}
+
+.movieTitle {
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 5px; /* Add space between title and rating/release date */
+  cursor: pointer; /* Set cursor to pointer */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Add hover styles */
+.movieTitle:hover {
+  color: #3498db; /* Light blue on hover */
+}
+
+.rating {
+  border-top: 1px solid #ddd;
+  padding-top: 5px;
+}
+
+.releaseDate {
+  color: #555; /* Dark color for release date */
+}
+
+/* Add hover styles */
+.releaseDate:hover {
+  color: #333; /* Darker color on hover */
+}
+
+.loadMoreButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.loadMoreButton {
+  position: fixed;
+  bottom: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

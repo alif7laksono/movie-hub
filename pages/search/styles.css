@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.search-page {
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 58%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000;
+}
+
+.search-result img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.search-result .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.search-result .description {
+  font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.search-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-input {
+  margin-bottom: 20px;
+}
+
+.movie-categories {
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: center; /* Center the text */
+}
+
+.movie-categories ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-categories li {
+  margin: 5px; /* Adjust the margin as needed */
+  cursor: pointer;
+}
+
+.movie-categories ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items horizontally */
+}
+
+.movie-categories li {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+
+  display: flex;
+  align-items: center;
+}
+
+.movie-categories li:hover {
+  background-color: #dcdcdc; /* Change the background color on hover */
+}
+
+.movie-categories ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-categories li {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.load-more-button {
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .movie-categories li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search-input {
+    width: 100%;
+  }
+
+  .movie-categories li {
+    width: auto;
+
+  }
+}

@@ -1,0 +1,17 @@
+.imageScrollerContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .imageScroller {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px; /* Adjust this value based on the total width of 5 movie cards */
+  }
+  
+  .movieCard {
+    flex: 1 0 20%; /* This will make the movie card take up 20% of the row, effectively showing 5 cards per row */
+    /* Add your other styles here */
+  }
+  

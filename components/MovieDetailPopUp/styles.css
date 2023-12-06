@@ -1,0 +1,234 @@
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.movie-header {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.movie-title {
+  color: #333;
+  font-weight: bold;
+}
+
+.movie-body {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.movie-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-poster {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.movie-right {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.movie-overview {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.bold-text {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.vote-average {
+  margin-top: 10px;
+  color: #008000;
+  font-weight: bold;
+}
+
+.info-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.info-detail {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-style: italic;
+}
+
+.info-row {
+  display: flex;
+  gap: 20px;
+}
+
+.info-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .movie-body {
+    flex-direction: column;
+  }
+
+  .movie-left,
+  .movie-right {
+    flex: none;
+  }
+
+  .movie-right {
+    padding-left: 0;
+  }
+}
+
+.popup-movie-trailers {
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.popup-movie-trailers h6 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-movie-trailers ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.popup-movie-trailers ul li {
+  margin-bottom: 10px;
+}
+
+.popup-movie-trailers ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.popup-movie-trailers ul li a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Popup Movie Cast */
+
+.popup-movie-cast {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-movie-cast ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex; /* Use flex for horizontal layout */
+  gap: 15px; /* Adjusted gap for better spacing */
+  overflow-x: auto; /* Enable horizontal scrolling for the list */
+  overflow-y: hidden; /* Hide vertical scroll within the list */
+}
+
+.popup-movie-cast li {
+  flex: 0 0 auto; /* Allow items to shrink if needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.popup-movie-cast .cast-member-image {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px; /* Adjusted margin for better spacing */
+}
+
+.popup-movie-cast .cast-member-details {
+  text-align: center;
+}
+
+.popup-movie-cast .actor-name {
+  font-weight: bold;
+  margin-top: 5px; /* Adjusted margin for spacing between image and name */
+}
+
+.popup-movie-cast .actor-character {
+  color: #555;
+  font-size: 16px; /* Adjusted font size for better readability */
+}
+
+/* Add these styles to styles.css */
+.movie-recommendations {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.movie-recommendations ul {
+  cursor: pointer;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px;
+  display: flex;
+  overflow-x: auto;
+  justify-content: flex-end;
+
+}
+
+.movie-recommendations li {
+  margin-right: 10px;
+  margin-left: 10px; /* Add left margin */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.2s;
+  width: 200px; /* Set a fixed width for each movie */
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+}
+
+.movie-recommendations li:hover {
+  transform: scale(1.05);
+  color: rgb(11, 111, 144);
+}
+
+.movie-recommendations img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.movie-recommendations .movie-title {
+  text-align: center;
+  margin: 8px 0;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long titles */
+  white-space: nowrap;
+  transition: color 0.2s;
+}
