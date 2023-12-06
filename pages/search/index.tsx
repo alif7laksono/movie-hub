@@ -6,7 +6,7 @@ import {
   getMoviesByCategory,
   getAllMovies,
 } from "@/utils/api";
-import { SearchResult, MovieCategory } from "@/utils/types";
+import { SearchResult, MovieCategory, Movie } from "@/utils/types";
 import SearchResults from "@/components/SearchResults";
 import { TextField, Typography, Button } from "@mui/material";
 import "./styles.css";
@@ -41,7 +41,7 @@ const SearchPage: React.FC = () => {
     const allMoviesInCategory = await getMoviesByCategory(categoryId);
   
     // Filter the movies by title
-    const filteredMovies = allMoviesInCategory.filter(movie =>
+    const filteredMovies = allMoviesInCategory.filter((movie: Movie) =>
       movie.title.toLowerCase().includes(title.toLowerCase())
     );
   
