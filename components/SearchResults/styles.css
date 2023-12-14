@@ -7,6 +7,7 @@
   width: 100%; /* Set the width as needed */
   margin: 20px auto; /* Center the content */
   text-decoration: none;
+  padding-top: 20px;
 }
 
 .search-result-item {
