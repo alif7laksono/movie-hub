@@ -8,7 +8,8 @@ import {
 } from "@/utils/api";
 import { SearchResult, MovieCategory, Movie } from "@/utils/types";
 import SearchResults from "@/components/SearchResults";
-import { TextField, Typography, Button } from "@mui/material";
+import { TextField, Typography, Button} from "@mui/material";
+import Link from "next/link";
 import "./styles.css";
 
 const SearchPage: React.FC = () => {
@@ -36,48 +37,44 @@ const SearchPage: React.FC = () => {
     fetchData();
   }, []);
 
-  const searchMoviesByTitleAndCategory = async (title: string, categoryId: number) => {
+  const searchMoviesByTitleAndCategory = async (
+    title: string,
+    categoryId: number
+  ) => {
     // Fetch all movies in the selected category
     const allMoviesInCategory = await getMoviesByCategory(categoryId);
-  
+
     // Filter the movies by title
     const filteredMovies = allMoviesInCategory.filter((movie: Movie) =>
       movie.title.toLowerCase().includes(title.toLowerCase())
     );
-  
+
     return filteredMovies;
   };
 
   const handleSearch = async () => {
     try {
-      // If a category is selected, fetch movies by category
       if (selectedCategory !== null) {
         if (searchQuery.trim() === "") {
-          // If there's no search query and a category is selected,
-          // fetch all movies in the selected category.
           const results = await getMoviesByCategory(selectedCategory);
           setSearchResults(results);
         } else {
-          // If there's a search query and a category is selected,
-          // perform a search by title within the selected category.
-          const results = await searchMoviesByTitleAndCategory(searchQuery, selectedCategory);
+          const results = await searchMoviesByTitleAndCategory(
+            searchQuery,
+            selectedCategory
+          );
           setSearchResults(results);
         }
       } else {
-        // If no category is selected, perform a regular search by title
         if (searchQuery.trim() === "") {
-          // If there's no search query and no category selected,
-          // you might want to handle this case accordingly.
-          // For example, display a message or show popular movies.
           console.log("No search query or category selected");
           return;
         }
-  
-        // If there's a search query, perform a regular search by title
+
         const results = await searchMoviesByTitle(searchQuery);
         setSearchResults(results);
       }
-  
+
       // Reset the visible results when performing a new search
       setVisibleResults(20);
     } catch (error) {
@@ -110,15 +107,20 @@ const SearchPage: React.FC = () => {
   return (
     <>
       <div className="search-page">
-        <TextField
-          type="text"
-          placeholder="Search Movies"
-          className="search-input"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          onKeyDown={handleKeyDown}
-          fullWidth
-        />
+        <div className="navbar">
+          <Link href="/" className="tmdb-link">
+            TMDB
+          </Link>
+          <TextField
+            type="text"
+            placeholder="Search Movies"
+            className="search-input"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
+            fullWidth
+          />
+        </div>
 
         <div className="movie-categories">
           <ul>
@@ -147,7 +149,6 @@ const SearchPage: React.FC = () => {
         {searchResults.length === 0 && (
           <Typography variant="body1">No results found.</Typography>
         )}
-
       </div>
     </>
   );
