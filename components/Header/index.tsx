@@ -33,15 +33,7 @@ const Header = () => {
     } catch (error) {
       console.error("Error performing search:", error);
     }
-  };
-
-  // const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-  //   // Listen for Enter key press
-  //   if (e.key === "Enter") {
-  //     handleSearch();
-  //     router.push(`/search?query=${searchQuery}`);
-  //   }
-  // };
+  }
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     // Listen for Enter key press
