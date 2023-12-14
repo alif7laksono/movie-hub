@@ -72,7 +72,7 @@ const Header = () => {
             Trending
           </Link>
           <Link href="/" className="link" target="_blank">
-            Now Playing
+            Now Playin
           </Link>
           <Link href="/" className="link" target="_blank">
             Upcoming
